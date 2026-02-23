@@ -1,29 +1,50 @@
 site_name: FIAE Wiki
+site_description: Description
+site_author: Leon Ziegenhagen
+
+repo_url: https://github.com/discohagen/FIAE
+edit_uri: ""
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js
 
 theme:
-  name: mkdocs
-  color_mode: auto
-  user_color_mode_toggle: color_mode
-
+  name: material
+  features:
+    - navigation.instant
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 nav:
   - Wirtschaft:
-    - wirtschaft/index.md
-    - Wertschöpfungskette: wirtschaft/wertschoepfungskette.md
-    - Qualitativer Angebotsvergleich / Nutzwertanalyse: wirtschaft/nutzwertanalyse.md
-    - Quantitativer Angebotsvergleich / Handelskalkulation: wirtschaft/handelskalkulation.md
-    - Markt: wirtschaft/markt.md
-    - Marketing: wirtschaft/marketing.md
-    - Finanzierung: wirtschaft/finanzierung.md
-    - Entgeltabrechnung & Sozialabgaben: wirtschaft/entgeltabrechnung.md
-    - Wirtschaftlichkeitsbetrachtung & wirtschaftliche Kennzahlen: wirtschaft/wirtschaftlichkeit.md
+      - Start: wirtschaft/index.md
+      - Wertschöpfungskette: wirtschaft/wertschoepfungskette.md
+      - Qualitativer Angebotsvergleich / Nutzwertanalyse: wirtschaft/nutzwertanalyse.md
+      - Quantitativer Angebotsvergleich / Handelskalkulation: wirtschaft/handelskalkulation.md
+      - Markt: wirtschaft/markt.md
+      - Marketing: wirtschaft/marketing.md
+      - Finanzierung: wirtschaft/finanzierung.md
+      - Entgeltabrechnung & Sozialabgaben: wirtschaft/entgeltabrechnung.md
+      - Wirtschaftlichkeitsbetrachtung & wirtschaftliche Kennzahlen: wirtschaft/wirtschaftlichkeit.md
   - Recht:
-    - recht/index.md
+      - Start: recht/index.md
   - IT-Sicherheit:
-    - it-sicherheit/index.md
+      - Start: it-sicherheit/index.md
   - Projektmanagement:
-    - projektmanagement/index.md
+      - Start: projektmanagement/index.md
   - Netzwerke:
-    - netzwerke/index.md
+      - Start: netzwerke/index.md
   - Software:
-    - software/index.md
+      - Start: software/index.md
   - about.md
