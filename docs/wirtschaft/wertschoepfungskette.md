@@ -10,8 +10,6 @@ Das Grundmodell nach Michael Porter unterscheidet zwischen **Primäraktivitäten
 
 ![Wertschöpfungskette](static/Wertschoepfungskette_Porter.jpg)
 
-_Wertschöpfungskette nach Porter_
-
 **Primäraktivitäten**:
 
 - Eingangslogistik: Empfang, Lagerung und Verteilung von Rohstoffen
