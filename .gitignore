@@ -1,1 +1,13 @@
+# MkDocs Build Dir
 site/
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
