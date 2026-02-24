@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="29.4.0">
+  <diagram name="Seite-1" id="E8UCKzclBVTokynEXFsM">
+    <mxGraphModel dx="1194" dy="1060" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WPK4BhgnOnsu55JMgdGp-1" parent="1" style="triangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;align=left;fontStyle=1;fontSize=14;strokeColor=#6c8ebf;" value="Gewinn" vertex="1">
+          <mxGeometry height="320" width="70" x="680" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="WPK4BhgnOnsu55JMgdGp-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;verticalAlign=top;fontStyle=1;fontSize=14;strokeColor=#10739e;" value="Unterstützeraktivitäten" vertex="1">
+          <mxGeometry height="240" width="630" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WPK4BhgnOnsu55JMgdGp-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;verticalAlign=bottom;fontStyle=1;fontSize=14;fontColor=#ffffff;strokeColor=#006EAF;" value="Primäraktivitäten" vertex="1">
+          <mxGeometry height="90" width="630" x="40" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="WPK4BhgnOnsu55JMgdGp-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" value="Unternehemensinfrastruktur" vertex="1">
+          <mxGeometry height="40" width="590" x="60" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WPK4BhgnOnsu55JMgdGp-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" value="Personalwirtschaft" vertex="1">
+          <mxGeometry height="40" width="590" x="60" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="WPK4BhgnOnsu55JMgdGp-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" value="Technologieentwicklung" vertex="1">
+          <mxGeometry height="40" width="590" x="60" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="WPK4BhgnOnsu55JMgdGp-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" value="Beschaffung" vertex="1">
+          <mxGeometry height="40" width="590" x="60" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="WPK4BhgnOnsu55JMgdGp-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Eingangslogistik" vertex="1">
+          <mxGeometry height="40" width="110" x="60" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="WPK4BhgnOnsu55JMgdGp-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Operationen" vertex="1">
+          <mxGeometry height="40" width="110" x="180" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="WPK4BhgnOnsu55JMgdGp-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Ausgangslogisitk" vertex="1">
+          <mxGeometry height="40" width="110" x="300" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="WPK4BhgnOnsu55JMgdGp-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Marketing &amp;amp; Vertrieb" vertex="1">
+          <mxGeometry height="40" width="110" x="420" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="WPK4BhgnOnsu55JMgdGp-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Kundendienst" vertex="1">
+          <mxGeometry height="40" width="110" x="540" y="310" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
