@@ -6,47 +6,47 @@ repo_url: https://github.com/discohagen/FIAE
 edit_uri: ""
 
 markdown_extensions:
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
+    - pymdownx.arithmatex:
+          generic: true
+    - pymdownx.caret
+    - pymdownx.mark
+    - pymdownx.tilde
 
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js
+    - javascripts/mathjax.js
+    - https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js
 
 theme:
-  name: material
-  features:
-    - navigation.instant
-  palette:
-    - scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+    name: material
+    features:
+        - navigation.instant
+    palette:
+        - scheme: default
+          toggle:
+              icon: material/brightness-7
+              name: Switch to dark mode
+        - scheme: slate
+          toggle:
+              icon: material/brightness-4
+              name: Switch to light mode
 nav:
-  - Wirtschaft:
-      - Start: wirtschaft/index.md
-      - Wertschöpfungskette: wirtschaft/wertschoepfungskette.md
-      - Qualitativer Angebotsvergleich / Nutzwertanalyse: wirtschaft/nutzwertanalyse.md
-      - Quantitativer Angebotsvergleich / Handelskalkulation: wirtschaft/handelskalkulation.md
-      - Markt & Marketing: wirtschaft/markt.md
-      - Finanzierung: wirtschaft/finanzierung.md
-      - Entgeltabrechnung & Sozialabgaben: wirtschaft/entgeltabrechnung.md
-      - Wirtschaftlichkeitsbetrachtung & wirtschaftliche Kennzahlen: wirtschaft/wirtschaftlichkeit.md
-  - Recht:
-      - Start: recht/index.md
-  - IT-Sicherheit:
-      - Start: it-sicherheit/index.md
-  - Projektmanagement:
-      - Start: projektmanagement/index.md
-  - Netzwerke:
-      - Start: netzwerke/index.md
-  - Software:
-      - Start: software/index.md
-  - about.md
+    - Wirtschaft:
+          - Start: wirtschaft/index.md
+          - Wertschöpfungskette: wirtschaft/wertschoepfungskette.md
+          - Qualitativer Angebotsvergleich / Nutzwertanalyse: wirtschaft/nutzwertanalyse.md
+          - Quantitativer Angebotsvergleich / Handelskalkulation: wirtschaft/handelskalkulation.md
+          - Markt & Marketing: wirtschaft/markt.md
+          - Finanzierung: wirtschaft/finanzierung.md
+          - Entgeltabrechnung & Sozialabgaben: wirtschaft/entgeltabrechnung.md
+          - Wirtschaftlichkeitsbetrachtung & wirtschaftliche Kennzahlen: wirtschaft/wirtschaftlichkeit.md
+    - Recht:
+          - Start: recht/index.md
+    - IT-Sicherheit:
+          - Start: it-sicherheit/index.md
+    - Projektmanagement:
+          - Start: projektmanagement/index.md
+    - Netzwerke:
+          - Start: netzwerke/index.md
+    - Software:
+          - Start: software/index.md
+    - about.md
