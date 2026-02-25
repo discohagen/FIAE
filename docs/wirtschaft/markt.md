@@ -30,11 +30,11 @@ Ein Markt ist heterogen, wenn dessen Güter nicht homogen sind, Präferenzen zwi
 
 Der Markt kann auch in Formen anhand der Anzahl von Angebot und Nachfrage modelliert werden:
 
-| | Ein Nachfrager | Wenige Nachfrager | Viele Nachfrager |
-| --- | --- | --- | --- |
-| **Ein Anbieter** | Zweiseitiges Monopol | Beschränktes Angebotsmonopol | Monopol / Angebotsmonopol |
-| **Wenige Anbieter** | Beschränktes Nachfragemonopol | Zweiseitiges Oligopol | Oligopol |
-| **Viele Anbieter** | Monopson / Nachfragemonopol | Nachfrageoligopol | Polypol |
+|                     | Ein Nachfrager                | Wenige Nachfrager            | Viele Nachfrager          |
+| ------------------- | ----------------------------- | ---------------------------- | ------------------------- |
+| **Ein Anbieter**    | Zweiseitiges Monopol          | Beschränktes Angebotsmonopol | Monopol / Angebotsmonopol |
+| **Wenige Anbieter** | Beschränktes Nachfragemonopol | Zweiseitiges Oligopol        | Oligopol                  |
+| **Viele Anbieter**  | Monopson / Nachfragemonopol   | Nachfrageoligopol            | Polypol                   |
 
 ## Marktarten
 
@@ -84,7 +84,62 @@ Marketing besteht in der Praxis aus einem Mix (sog. Marketing-Mix) an Marketingi
 
 ### Preis- und Konditionenpolitik
 
+Die Preispolitik versucht Preise in einem Spielraum zwischen Obergrenze (was ist der Käufer max. bereit zu zahlen?) und Untergrenze (wie hoch sind die Selbstkosten?) zu setzen. Dabei beschränkt eine Vergleichbarkeit zu anderen Anbietern und ihren Produkten den Preisspielraum zusätzlich. Ist die Preispolitik auf ein Produkt dynamisch und schwankt, so nennt man sie auch Preisdifferenzierung. Dies kann z.B. für Saisonartikel eine zeitliche Preisdifferenzierung und für bestimmte Plätze auf Konzerten oder im Flugzeug eine räumliche Preisdifferenzierung sein.
+
+Die Konditionenpolitik umfasst die Gestaltung von Kreditbedingungen, Rabatten sowie Liefer- und Zahlungsbedingungen. Beispielhafte Konditionen sind:
+
+- Lieferbedingungen
+    - Übernahme der Transportkosten
+    - Übernahme von Verpackungskosten
+- Zahlungsbedingungen
+    - Gewährung von Zahlungszielen
+    - Gewährung von Skonti oder Boni
+    - Gewährung von Rabatten
+- Finanzierungshilfen
+    - Direkte Kreditierung des Auftrags
+    - Vermittlung von Finanzierungen
+    - Leasingangebote
+- Garantieleistungen
+    - Werkgarantie
+
 ### Werbung / Kommunikationspolitik
+
+Die Kommunikationspolitik versucht das Unternehmen und seine Produkte in der Öffentlichkeit bzw. dem Kunden darzustellen um Kaufinteresse zu wecken. Dafür wird hauptsächlich das Instrument der Werbung genutzt. Werbung informiert grundsätzlich über konkrete Produkte.
+
+#### AIDA
+
+Klassischerweise folgt Werbung der AIDA-Vorgehensweise:
+
+1. Attention: Aufmerksamkeit erzeugen
+2. Interest: Interesse wecken
+3. Desire: Begehrlichkeit erzeugen / Kaufwunsch wecken
+4. Action: Handlungsaufruf einbinden / Kauf tätigen
+
+#### Werbemaßnahmen
+
+**Direktwerbung**: Direkte Ansprache des potentiellen Kunden, z.B. durch personalisierte Werbung per Post, E-Mail oder auf Social Media.
+
+**Öffentlichkeitsarbeit**: Generelles werben des Unternehmes um ein positives Image und die Unternehmensidentität zu vermitteln, z.B. durch Spenden, Tagen der offenen Tür oder Sponsoring.
+
+**Product Placement**: Ein Produkt wird in Entertainment-Medien platziert um es subtil zu bewerben, z.B. durch die Platzierung in Filmen oder Serien.
+
+**Digitales Marketing**: Alle Werbemaßnahmen über digitale Kanäle. Beliebt Mittel sind hier Suchmaschinenoptimierung (SEO), Suchmaschinenmarketing (SEA), Content-Marketing, Programmatic Advertising (Automatisierte Werbung mithilfe von Algorithmen) und Social-Media-Marketing.
+
+**Native Advertising**: Werbung, die sich in das Umfeld einfügt, in dem sie erscheint, z.B. durch gesponserte Artikel oder Videos.
+
+#### Werbegestaltung
+
+Um Werbung zu gestalten sollte man die folgenden Schritte beachten:
+
+- Situationsanalyse
+- Werbeziele / Werbebotschaft
+- Werbebudget
+- Werbestrategie
+- Werbemittel (Ausdrucksform, z.B. Plakat, Werbesport, Newsletter)
+- Werbeträger (Verbreitungsmedium, z.B. Messe, TV, Internet)
+- Werbezeitraum
+- Werbegebiet
+- Werbeerfolgsquote
 
 ### Distributions- / Vertriebspolitik
 
