@@ -82,6 +82,26 @@ Marketing besteht in der Praxis aus einem Mix (sog. Marketing-Mix) an Marketingi
 
 ### Produkt- und Sortimentspolitik
 
+Die Produkt- und Sortimentspolitik umfasst das gesamte Leistungsangebot aller Produkte und Dienstleistungen eines Unternehmens. Für Unternehmen sind dabei die technische Konstruktion, DIN-Normen und Kosten wichtig, während für Kunden überwiegen aktuelle Trends, Farbe, Design, Qualität, Marke und Preis wichtig sind.
+
+Die Produkt- und Sortimentspolitik benutzt folgende Instrumente:
+
+- Qualität: Umfasst Meinungen und Vorstellungen über den Gebrauchsnutzen (Wofür wird das Produkt verwendet?), die Ausstattung (Welchen Zusatznutzen bietet das Produkt?), die Zuverlässigkeit (Wie problemlos funktioniert das Produkt?) und die Ästhetik (Wie gefällt das Produkt?).
+- Sortiment: Unterschiedliche Produkte und Produktvarianten um unterschiedliche Zielgruppen anzusprechen.
+- Markenname: Wiedererkennung, Markentreue und Wiederholungskauf
+- Image
+
+Instrumente der Produktpolitik sind:
+
+- Produktinnovation: Neue Produkte aufnehmen
+- Produktmodifikation / Produktverbesserung: Bestehende Produkte ändern / verbessern
+- Produktvariation: Bestehende Produkte in verschiedenen Varianten anbieten
+- Produktselektion: Produkte aus dem Sortiment entfernen um z.B. bewusst andere Produkte zu fördern
+
+Es ergibt sich ein Produktlebenszyklus:
+
+![Produktlebenszyklus](static/Produktlebenszyklus.png)
+
 ### Preis- und Konditionenpolitik
 
 Die Preispolitik versucht Preise in einem Spielraum zwischen Obergrenze (was ist der Käufer max. bereit zu zahlen?) und Untergrenze (wie hoch sind die Selbstkosten?) zu setzen. Dabei beschränkt eine Vergleichbarkeit zu anderen Anbietern und ihren Produkten den Preisspielraum zusätzlich. Ist die Preispolitik auf ein Produkt dynamisch und schwankt, so nennt man sie auch Preisdifferenzierung. Dies kann z.B. für Saisonartikel eine zeitliche Preisdifferenzierung und für bestimmte Plätze auf Konzerten oder im Flugzeug eine räumliche Preisdifferenzierung sein.
