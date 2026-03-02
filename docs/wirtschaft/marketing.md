@@ -28,7 +28,7 @@ Instrumente der Produktpolitik sind:
 
 Es ergibt sich ein Produktlebenszyklus:
 
-![Produktlebenszyklus](static/Produktlebenszyklus.png)
+![Produktlebenszyklus](figures/Produktlebenszyklus.png)
 
 ### Preis- und Konditionenpolitik
 

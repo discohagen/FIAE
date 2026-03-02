@@ -11,6 +11,7 @@ markdown_extensions:
     - pymdownx.caret
     - pymdownx.mark
     - pymdownx.tilde
+    - pymdownx.snippets
 
 extra_javascript:
     - javascripts/mathjax.js
