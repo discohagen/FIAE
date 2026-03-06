@@ -1,0 +1,24 @@
+<link rel="stylesheet"
+    href="handelskalkulator.css">
+<div id="rueckwaertskalkulator"></div>
+<script
+    src="handelskalkulator.js"></script>
+<script>
+    new HKalkulator("rueckwaertskalkulator", [
+        { id: "listenverkaufspreis", label: "Listenverkaufspreis (netto)", op: "=", input: "absolute" },
+        { id: "kundenrabatt", label: "Kundenrabatt", op: "-", input: "both", special: "skonto-rueck" },
+        { id: "zielverkaufspreis", label: "Zielverkaufspreis", op: "=" },
+        { id: "kundenskonto", label: "Kundenskonto", op: "-", input: "both", special: "skonto-rueck" },
+        { id: "barverkaufspreis", label: "Barverkaufspreis", op: "=" },
+        { id: "gewinn", label: "Gewinn", op: "-", input: "both", special: "gewinn-rueck" },
+        { id: "selbstkosten", label: "Selbstkosten", op: "=" },
+        { id: "handlungskosten", label: "Handlungskosten", op: "-", input: "both", special: "hk-rueck" },
+        { id: "bezugspreis", label: "Bezugspreis", op: "=" },
+        { id: "bezugskosten", label: "Bezugskosten", op: "-", input: "absolute" },
+        { id: "bareinkaufspreis", label: "Bareinkaufspreis", op: "=" },
+        { id: "lieferskonto", label: "Lieferskonto", op: "+", input: "both", special: "lieferskonto-rueck" },
+        { id: "zieleinkaufspreis", label: "Zieleinkaufspreis", op: "=" },
+        { id: "lieferrabatt", label: "Lieferrabatt", op: "+", input: "both", special: "lieferrabatt-rueck" },
+        { id: "listeneinkaufspreis", label: "Listeneinkaufspreis", op: "=" },
+    ]);
+</script>

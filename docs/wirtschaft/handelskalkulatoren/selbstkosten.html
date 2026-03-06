@@ -1,0 +1,12 @@
+<link rel="stylesheet"
+    href="handelskalkulator.css">
+<div id="selbstkostenkalkulator"></div>
+<script
+    src="handelskalkulator.js"></script>
+<script>
+    new HKalkulator("selbstkostenkalkulator", [
+        { id: "bezugspreis", label: "Bezugspreis / Einstandspreis", op: "=", input: "absolute" },
+        { id: "handlungskosten", label: "Handlungskosten", op: "+", input: "both" },
+        { id: "selbstkosten", label: "Selbstkosten", op: "=" },
+    ]);
+</script>

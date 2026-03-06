@@ -1,149 +1,16 @@
-<style>
-    #bezugskalkulator input[type="number"] {
-        background-color: var(--md-default-bg-color);
-        color: var(--md-default-fg-color);
-        border: 1px solid var(--md-default-fg-color--light);
-        border-radius: 4px;
-        padding: 4px 8px;
-        width: 100px;
-        font-size: 0.85rem;
-    }
-
-    #bezugskalkulator input[type="number"]:focus {
-        outline: 2px solid var(--md-accent-fg-color);
-        border-color: var(--md-accent-fg-color);
-    }
-</style>
-
-<div id="bezugskalkulator">
-    <table>
-        <thead>
-            <tr>
-                <td>Schritt</td>
-                <td>Operation</td>
-                <td>Prozentsatz [%]</td>
-                <td>Festpreis [€]</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Listeneinkaufspreis
-                </td>
-                <td>=</td>
-                <td></td>
-                <td>
-                    <input
-                        id='Listeneinkaufspreis'
-                        type="number"
-                        required />
-                </td>
-            </tr>
-
-            <tr>
-                <td>Lieferrabatt</td>
-                <td>-</td>
-                <td>
-                    <input type="number"
-                        id='Lieferrabatt-prozent' />
-                </td>
-                <td>
-                    <input type="number"
-                        id='Lieferrabatt-absolut' />
-                </td>
-            </tr>
-
-            <tr>
-                <td>Zieleinkaufspreis
-                </td>
-                <td>=</td>
-                <td></td>
-                <td><span
-                        id='Zieleinkaufspreis'></span>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Lieferskonto</td>
-                <td>-</td>
-                <td><input
-                        id='Lieferskonto-prozent'
-                        type='number' />
-                </td>
-                <td><input
-                        id='Lieferskonto-absolut'
-                        type='number' />
-                </td>
-            </tr>
-
-            <tr>
-                <td>Bareinkaufspreis
-                </td>
-                <td>=</td>
-                <td></td>
-                <td><span
-                        id='Bareinkaufspreis'></span>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Bezugskosten</td>
-                <td>+</td>
-                <td></td>
-                <td><input
-                        id='Bezugskosten'
-                        type='number'>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Bezugspreis/Einstandspreis
-                </td>
-                <td>=</td>
-                <td></td>
-                <td><span
-                        id='Bezugspreis'></span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
+<link rel='stylesheet'
+    href='handelskalkulator.css'>
+<div id='bezugskalkulator'></div>
+<script
+    src='handelskalkulator.js'></script>
 <script>
-    const listeneinkaufspreis = document.getElementById("Listeneinkaufspreis");
-    const lieferrabattProzent = document.getElementById("Lieferrabatt-prozent");
-    const lieferrabattAbsolut = document.getElementById("Lieferrabatt-absolut");
-    const zieleinkaufspreis = document.getElementById("Zieleinkaufspreis");
-    const lieferskontoProzent = document.getElementById("Lieferskonto-prozent");
-    const lieferskontoAbsolut = document.getElementById("Lieferskonto-absolut");
-    const bareinkaufspreis = document.getElementById("Bareinkaufspreis");
-    const bezugskosten = document.getElementById("Bezugskosten");
-    const bezugspreis = document.getElementById("Bezugspreis");
-
-    function n(el) { return parseFloat(el.value) || 0; }
-
-    [listeneinkaufspreis, lieferrabattProzent, lieferrabattAbsolut, lieferskontoProzent, lieferskontoAbsolut, bezugskosten]
-        .forEach(el => el.addEventListener("input", e => {
-            const id = e.target.id;
-
-            if (id === lieferrabattProzent.id) {
-                lieferrabattAbsolut.value = (n(listeneinkaufspreis) * n(lieferrabattProzent) / 100).toFixed(2);
-            } else if (id === lieferrabattAbsolut.id) {
-                lieferrabattProzent.value = n(listeneinkaufspreis) ? (100 * n(lieferrabattAbsolut) / n(listeneinkaufspreis)).toFixed(2) : 0;
-            }
-
-            const zep = n(listeneinkaufspreis) - n(lieferrabattAbsolut);
-            zieleinkaufspreis.textContent = zep.toFixed(2);
-
-            if (id === lieferskontoProzent.id) {
-                lieferskontoAbsolut.value = (zep * n(lieferskontoProzent) / 100).toFixed(2);
-            } else if (id === lieferskontoAbsolut.id) {
-                lieferskontoProzent.value = zep ? (100 * n(lieferskontoAbsolut) / zep).toFixed(2) : 0;
-            }
-
-            const bep = zep - n(lieferskontoAbsolut);
-            bareinkaufspreis.textContent = bep.toFixed(2);
-
-            const bzp = bep + n(bezugskosten);
-            bezugspreis.textContent = bzp.toFixed(2);
-        }));
+    new HKalkulator("bezugskalkulator", [
+        { id: "listeneinkaufspreis", label: "Listeneinkaufspreis", op: "=", input: "absolute" },
+        { id: "lieferrabatt", label: "Lieferrabatt", op: "-", input: "both" },
+        { id: "zieleinkaufspreis", label: "Zieleinkaufspreis", op: "=" },
+        { id: "lieferskonto", label: "Lieferskonto", op: "-", input: "both" },
+        { id: "bareinkaufspreis", label: "Bareinkaufspreis", op: "=" },
+        { id: "bezugskosten", label: "Bezugskosten", op: "+", input: "absolute" },
+        { id: "bezugspreis", label: "Bezugspreis", op: "=" },
+    ])
 </script>

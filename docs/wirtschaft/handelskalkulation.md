@@ -20,7 +20,7 @@ Die Bezugskalkulation ermittelt den Bezugspreis, also die tatsächlichen Kosten 
 | +   | Bezugskosten               | Alle zusätzlichen Kosten für die Lieferung (z.B. Frachtkosten, Transportversicherung, Verpackung, Zölle)                       |
 | =   | Bezugspreis/Einstandspreis | Tatsächlichen Kosten für den Einkauf einer Ware                                                                                |
 
---8<-- "docs/wirtschaft/handelskalkulatoren/bezugskalkulator.html"
+--8<-- "docs/wirtschaft/handelskalkulatoren/bezugskosten.html"
 
 **Beispiel**
 
@@ -47,6 +47,8 @@ $$
 | =   | Bezugspreis/Einstandspreis | Tatsächlichen Kosten für den Einkauf einer Ware                              |
 | +   | Handlungskosten            | Kosten, welche nicht direkt einem einzelnen Produkt zugeordnet werden können |
 | =   | Selbstkosten               | Kosten vor einem Gewinn                                                      |
+
+--8<-- "docs/wirtschaft/handelskalkulatoren/selbstkosten.html"
 
 **Beispiel**
 
@@ -88,6 +90,8 @@ $$
 
 Der Listenverkaufspreis ist in netto angegeben. Um den Listenverkaufspreis in brutto zu bekommen addiert man die Umsatzsteuer (allgemein 19% und ermäßigt 7%).
 
+--8<-- "docs/wirtschaft/handelskalkulatoren/verkaufskosten.html"
+
 **Beispiel**
 
 |     |                             |     |                                     |         |
@@ -124,6 +128,8 @@ Die vollständige Handelskalkulation vorwärts beinhaltet die Bezugs-, Selbstkos
 | +   | Kundenrabatt                |
 | =   | Listenverkaufspreis (netto) |
 
+--8<-- "docs/wirtschaft/handelskalkulatoren/vorwaerts.html"
+
 **Beispiel**
 
 |     |                             |     |                                     |         |
@@ -154,6 +160,8 @@ Die vollständige Handelskalkulation rückwärts beinhaltet alle Teilkalkulation
 
 Die Bezüge der Operationen drehen sich um.
 
+--8<-- "docs/wirtschaft/handelskalkulatoren/rueckwaerts.html"
+
 **Beispiel**
 
 |     |                             |     |                                         |           |
@@ -177,3 +185,5 @@ Die Bezüge der Operationen drehen sich um.
 ## Differenzkalkulation
 
 Die Differenzkalkulation ermittelt den maximal möglichen Gewinn bei fixen Listeneinkaufs- und Listenverkaufspreis. Dafür führt man die Vorwärtskalkulation bis zu den Selbstkosten und die Rückwärtskalkulation bis zum Barverkaufspreis durch und berechnet dann die Differenz aus Barverkaufspreis und Selbstkosten.
+
+--8<-- "docs/wirtschaft/handelskalkulatoren/differenz.html"

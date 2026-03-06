@@ -1,0 +1,113 @@
+<link rel='stylesheet'
+    href='handelskalkulator.css'>
+
+<div id='differenzkalkulator-wrapper'>
+    <h4 style='margin-top: 0;'>
+        Einkaufsseite -> Selbstkosten
+    </h4>
+    <div id='differenz-einkauf'></div>
+
+    <h4>Verkaufsseite ->
+        Barverkaufspreis</h4>
+    <div id='differenz-verkauf'></div>
+
+    <table class='hkalkulator'
+        id='differenz-ergebnis-table'>
+        <tbody>
+            <tr
+                class='result-row end-row'>
+                <td>Barverkaufspreis
+                </td>
+                <td class='op-cell'>
+                </td>
+                <td></td>
+                <td><span
+                        id='differenz-barverkauf-display'>-</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Selbstkosten</td>
+                <td class='op-cell'>-
+                </td>
+                <td></td>
+                <td><span
+                        id='differenz-selbstkosten-display'>-</span>
+                </td>
+            </tr>
+            <tr
+                class='result-row end-row'>
+                <td><strong>Maximaler
+                        Gewinn</strong>
+                </td>
+                <td class='op-cell'>=
+                </td>
+                <td></td>
+                <td><span
+                        id='differenz-gewinn-display'>-</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script
+    src="handelskalkulator.js"></script>
+<script>
+    const einkauf = new HKalkulator("differenz-einkauf", [
+        { id: "listeneinkaufspreis", label: "Listeneinkaufspreis", op: "=", input: "absolute" },
+        { id: "lieferrabatt", label: "Lieferrabatt", op: "-", input: "both" },
+        { id: "zieleinkaufspreis", label: "Zieleinkaufspreis", op: "=" },
+        { id: "lieferskonto", label: "Lieferskonto", op: "-", input: "both" },
+        { id: "bareinkaufspreis", label: "Bareinkaufspreis", op: "=" },
+        { id: "bezugskosten", label: "Bezugskosten", op: "+", input: "absolute" },
+        { id: "bezugspreis", label: "Bezugspreis", op: "=" },
+        { id: "handlungskosten", label: "Handlungskosten", op: "+", input: "both" },
+        { id: "selbstkosten", label: "Selbstkosten", op: "=" },
+    ]);
+
+    const verkauf = new HKalkulator("differenz-verkauf", [
+        { id: "listenverkaufspreis", label: "Listenverkaufspreis (netto)", op: "=", input: "absolute" },
+        { id: "kundenrabatt", label: "Kundenrabatt", op: "-", input: "both", special: "skonto-rueck" },
+        { id: "zielverkaufspreis", label: "Zielverkaufspreis", op: "=" },
+        { id: "kundenskonto", label: "Kundenskonto", op: "-", input: "both", special: "skonto-rueck" },
+        { id: "barverkaufspreis", label: "Barverkaufspreis", op: "=" },
+    ]);
+
+    // ── Live difference calculation ──────────────────────────────────────────
+
+    function fmt(v) {
+        return v.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+    }
+
+    function readSpan(id) {
+        const el = document.getElementById(id);
+        if (!el) return 0;
+        return parseFloat(el.textContent.replace(/[^\d,.-]/g, '').replace(',', '.')) || 0;
+    }
+
+    function updateDiff() {
+        const selbstkosten = readSpan('differenz-einkauf__selbstkosten__abs');
+        const barverkaufspreis = readSpan('differenz-verkauf__barverkaufspreis__abs');
+        const gewinn = barverkaufspreis - selbstkosten;
+
+        document.getElementById('differenz-selbstkosten-display').textContent = fmt(selbstkosten);
+        document.getElementById('differenz-barverkauf-display').textContent = fmt(barverkaufspreis);
+
+        const gewinnEl = document.getElementById('differenz-gewinn-display');
+        gewinnEl.textContent = fmt(gewinn);
+        gewinnEl.style.color = gewinn >= 0
+            ? 'var(--md-primary-fg-color, green)'
+            : 'var(--md-typeset-del-color, red)';
+    }
+
+    // Patch both instances to also call updateDiff after recalc
+    const origEinkauf = einkauf._recalc.bind(einkauf);
+    einkauf._recalc = function () { origEinkauf(); updateDiff(); };
+
+    const origVerkauf = verkauf._recalc.bind(verkauf);
+    verkauf._recalc = function () { origVerkauf(); updateDiff(); };
+
+    // Re-bind with patched recalc
+    einkauf._bind();
+    verkauf._bind();
+</script>
