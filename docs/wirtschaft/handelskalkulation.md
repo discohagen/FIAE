@@ -101,10 +101,10 @@ Der Listenverkaufspreis ist in netto angegeben. Um den Listenverkaufspreis in br
 | =   | Barverkaufspreis            |     |                                     | 595,82€ |
 | +   | Kundenskonto                | 2%  | $\frac{595,82€ * 2\%}{100\% - 2\%}$ | 12,16€  |
 | =   | Zielverkaufspreis           |     |                                     | 607,98€ |
-| +   | Kundenrabatt                | 5%  | $\frac{607,98€ * 5\%}{100\% - 5\%}$ | 31,99€  |
-| =   | Listenverkaufspreis (netto) |     |                                     | 639,97€ |
+| +   | Kundenrabatt                | 5%  | $\frac{607,98€ * 5\%}{100\% - 5\%}$ | 32,00€  |
+| =   | Listenverkaufspreis (netto) |     |                                     | 639,98€ |
 
-Mit einer Umsatzsteuer von 19% ($19\% * 639,97€ = 121,59€$) ergibt sich ein Listenverkaufspreis (brutto) von 761,56€.
+Mit einer Umsatzsteuer von 19% ($19\% * 639,98€ = 121,59€$) ergibt sich ein Listenverkaufspreis (brutto) von 761,57€.
 
 ## Vollständige Handelskalkulation vorwärts
 
@@ -147,10 +147,10 @@ Die vollständige Handelskalkulation vorwärts beinhaltet die Bezugs-, Selbstkos
 | =   | Barverkaufspreis            |     |                                     | 595,82€ |
 | +   | Kundenskonto                | 2%  | $\frac{595,82€ * 2\%}{100\% - 2\%}$ | 12,16€  |
 | =   | Zielverkaufspreis           |     |                                     | 607,98€ |
-| +   | Kundenrabatt                | 5%  | $\frac{607,98€ * 5\%}{100\% - 5\%}$ | 31,99€  |
-| =   | Listenverkaufspreis (netto) |     |                                     | 639,97€ |
+| +   | Kundenrabatt                | 5%  | $\frac{607,98€ * 5\%}{100\% - 5\%}$ | 32,00€  |
+| =   | Listenverkaufspreis (netto) |     |                                     | 639,98€ |
 
-Mit einer Umsatzsteuer von 19% ($19\% * 639,97€ = 121,59€$) ergibt sich ein Listenverkaufspreis (brutto) von 761,56€.
+Mit einer Umsatzsteuer von 19% ($19\% * 639,98€ = 121,59€$) ergibt sich ein Listenverkaufspreis (brutto) von 761,57€.
 
 ## Vollständige Handelskalkulation rückwärts
 
