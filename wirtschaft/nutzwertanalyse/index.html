@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -440,6 +440,28 @@
     <span class="md-ellipsis">
       
         Vor- und Nachteile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typische-bewertungskriterien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typische Bewertungskriterien
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispiel-auswahl-eines-ticketsystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel: Auswahl eines Ticketsystems
       
     </span>
   </a>
@@ -1115,6 +1137,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#typische-bewertungskriterien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typische Bewertungskriterien
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispiel-auswahl-eines-ticketsystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel: Auswahl eines Ticketsystems
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1141,6 +1185,9 @@
 <li>Gewichtungsskala festlegen (z.B. 0-100% oder Punkte oder Schulnoten)</li>
 <li>Bewertungskriterien gewichten</li>
 <li>Bewertung durchführen</li>
+<li>Gewichteten Teilnutzwert berechnen (Punkt auf der Skala * Gewichtung)</li>
+<li>Gesamtnutzen je Alternative summieren</li>
+<li>Entscheidung anhand der Gesamtnutzen bestimmen</li>
 </ol>
 <h2 id="vor-und-nachteile">Vor- und Nachteile</h2>
 <p><strong>Vorteile</strong></p>
@@ -1156,6 +1203,374 @@
 <li>Mögliche unvollständige Handlungsalternativen</li>
 <li>Bei hoher Anzahl an Handlungsalternativen zeitaufwändig und arbeitsintensiv</li>
 </ul>
+<h2 id="typische-bewertungskriterien">Typische Bewertungskriterien</h2>
+<p>Kosten:</p>
+<ul>
+<li>Anschaffungs- / Lizenzkosten</li>
+<li>Betriebskosten</li>
+<li>Implementierungs- / Einführungskosten</li>
+<li>Schulungskosten</li>
+</ul>
+<p>Technik:</p>
+<ul>
+<li>Funktionsumfang</li>
+<li>Performance / Skalierbarkeit</li>
+<li>Sicherheit / Datenschutz</li>
+<li>Kompatibilität / Schnittstellen</li>
+<li>Plattformunterstützung</li>
+<li>Updateverhalten / Wartbarkeit</li>
+</ul>
+<p>Benutzer &amp; Betrieb</p>
+<ul>
+<li>Benutzerfreundlichkeit</li>
+<li>Einarbeitungsaufwand</li>
+<li>Administrierbarkeit</li>
+</ul>
+<p>Anbieter</p>
+<ul>
+<li>Support &amp; Reaktionszeiten</li>
+<li>Dokumentation &amp; Community</li>
+<li>Stabilität / Reputation</li>
+<li>Referenzen / Marktreife</li>
+<li>Lieferzeit / verfügbarkeit</li>
+</ul>
+<p>Zukunftssicher</p>
+<ul>
+<li>Erweiterbarkeit / Modularität</li>
+<li>Roadmap &amp; Entwicklungsaktivität</li>
+<li>Vendor Lock-in Risiko</li>
+</ul>
+<h2 id="beispiel-auswahl-eines-ticketsystems">Beispiel: Auswahl eines Ticketsystems</h2>
+<p>Entscheidungsalternativen bestimmen:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Jira</strong></th>
+<th><strong>Trello</strong></th>
+<th><strong>YouTrack</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Bewertungskriterien bestimmen:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Kriterium</strong></th>
+<th><strong>Jira</strong></th>
+<th><strong>Trello</strong></th>
+<th><strong>YouTrack</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preis</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Funktion</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Benutzerfreundlichkeit</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Support &amp; Dokumentation</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Integration</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Gewichtungsskala festlegen:</p>
+<p>1 (schlecht) bis 4 (gut)</p>
+<p>Bewertungskriterien gewichten:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Kriterium</strong></th>
+<th><strong>Gewichtung</strong></th>
+<th><strong>Jira</strong></th>
+<th><strong>Trello</strong></th>
+<th><strong>YouTrack</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preis</td>
+<td>30%</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Funktion</td>
+<td>25%</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Benutzerfreundlichkeit</td>
+<td>20%</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Support &amp; Dokumentation</td>
+<td>15%</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>10%</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Gesamntnutzwert</strong></td>
+<td>100%</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Bewertung durchführen:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Kriterium</strong></th>
+<th><strong>Gewichtung</strong></th>
+<th><strong>Jira</strong></th>
+<th><strong>Trello</strong></th>
+<th><strong>YouTrack</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preis</td>
+<td>30%</td>
+<td>2</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Funktion</td>
+<td>25%</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Benutzerfreundlichkeit</td>
+<td>20%</td>
+<td>2</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Support &amp; Dokumentation</td>
+<td>15%</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>10%</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Gesamntnutzwert</strong></td>
+<td>100%</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Gewichteten Teilnutzwert berechnen:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Kriterium</strong></th>
+<th><strong>Gewichtung</strong></th>
+<th><strong>Jira</strong></th>
+<th></th>
+<th><strong>Trello</strong></th>
+<th></th>
+<th><strong>YouTrack</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preis</td>
+<td>30%</td>
+<td>2</td>
+<td>0,6</td>
+<td>4</td>
+<td>1,2</td>
+<td>3</td>
+<td>0,9</td>
+</tr>
+<tr>
+<td>Funktion</td>
+<td>25%</td>
+<td>4</td>
+<td>1,0</td>
+<td>2</td>
+<td>0,5</td>
+<td>3</td>
+<td>0,75</td>
+</tr>
+<tr>
+<td>Benutzerfreundlichkeit</td>
+<td>20%</td>
+<td>2</td>
+<td>0,4</td>
+<td>4</td>
+<td>0,8</td>
+<td>3</td>
+<td>0,6</td>
+</tr>
+<tr>
+<td>Support &amp; Dokumentation</td>
+<td>15%</td>
+<td>4</td>
+<td>0,6</td>
+<td>2</td>
+<td>0,3</td>
+<td>3</td>
+<td>0,45</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>10%</td>
+<td>4</td>
+<td>0,4</td>
+<td>3</td>
+<td>0,3</td>
+<td>3</td>
+<td>0,3</td>
+</tr>
+<tr>
+<td><strong>Gesamntnutzwert</strong></td>
+<td>100%</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Gesamtnutzen je Alternative summieren:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Kriterium</strong></th>
+<th><strong>Gewichtung</strong></th>
+<th><strong>Jira</strong></th>
+<th></th>
+<th><strong>Trello</strong></th>
+<th></th>
+<th><strong>YouTrack</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preis</td>
+<td>30%</td>
+<td>2</td>
+<td>0,6</td>
+<td>4</td>
+<td>1,2</td>
+<td>3</td>
+<td>0,9</td>
+</tr>
+<tr>
+<td>Funktion</td>
+<td>25%</td>
+<td>4</td>
+<td>1,0</td>
+<td>2</td>
+<td>0,5</td>
+<td>3</td>
+<td>0,75</td>
+</tr>
+<tr>
+<td>Benutzerfreundlichkeit</td>
+<td>20%</td>
+<td>2</td>
+<td>0,4</td>
+<td>4</td>
+<td>0,8</td>
+<td>3</td>
+<td>0,6</td>
+</tr>
+<tr>
+<td>Support &amp; Dokumentation</td>
+<td>15%</td>
+<td>4</td>
+<td>0,6</td>
+<td>2</td>
+<td>0,3</td>
+<td>3</td>
+<td>0,45</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>10%</td>
+<td>4</td>
+<td>0,4</td>
+<td>3</td>
+<td>0,3</td>
+<td>3</td>
+<td>0,3</td>
+</tr>
+<tr>
+<td><strong>Gesamntnutzwert</strong></td>
+<td>100%</td>
+<td></td>
+<td>3,0</td>
+<td></td>
+<td>3,1</td>
+<td></td>
+<td>3,0</td>
+</tr>
+</tbody>
+</table>
+<p>Entscheidung anhand der Gesamtnutzen bestimmen:</p>
+<p>Trello gewinnt knapp vor Jira und YouTrack.</p>
 
 
 

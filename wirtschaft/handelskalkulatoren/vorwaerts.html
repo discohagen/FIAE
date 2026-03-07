@@ -1,0 +1,24 @@
+<link rel="stylesheet"
+    href="handelskalkulator.css">
+<div id="vorwaertskalkulator"></div>
+<script
+    src="handelskalkulator.js"></script>
+<script>
+    new HKalkulator("vorwaertskalkulator", [
+        { id: "listeneinkaufspreis", label: "Listeneinkaufspreis", op: "=", input: "absolute" },
+        { id: "lieferrabatt", label: "Lieferrabatt", op: "-", input: "both" },
+        { id: "zieleinkaufspreis", label: "Zieleinkaufspreis", op: "=" },
+        { id: "lieferskonto", label: "Lieferskonto", op: "-", input: "both" },
+        { id: "bareinkaufspreis", label: "Bareinkaufspreis", op: "=" },
+        { id: "bezugskosten", label: "Bezugskosten", op: "+", input: "absolute" },
+        { id: "bezugspreis", label: "Bezugspreis", op: "=" },
+        { id: "handlungskosten", label: "Handlungskosten", op: "+", input: "both" },
+        { id: "selbstkosten", label: "Selbstkosten", op: "=" },
+        { id: "gewinn", label: "Gewinn", op: "+", input: "both" },
+        { id: "barverkaufspreis", label: "Barverkaufspreis", op: "=" },
+        { id: "kundenskonto", label: "Kundenskonto", op: "+", input: "both", special: "skonto" },
+        { id: "zielverkaufspreis", label: "Zielverkaufspreis", op: "=" },
+        { id: "kundenrabatt", label: "Kundenrabatt", op: "+", input: "both", special: "rabatt" },
+        { id: "listenverkaufspreis", label: "Listenverkaufspreis (netto)", op: "=" },
+    ]);
+</script>

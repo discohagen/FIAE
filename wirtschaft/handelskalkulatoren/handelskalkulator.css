@@ -1,0 +1,120 @@
+.hkalkulator {
+    margin: 1.5rem 0;
+}
+
+.hkalkulator table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.85rem;
+}
+
+.hkalkulator thead tr {
+    background-color: var(--md-default-fg-color--lightest);
+}
+
+.hkalkulator thead th {
+    padding: 0.4rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--md-default-fg-color--light);
+    border-bottom: 2px solid var(--md-default-fg-color--lighter);
+    white-space: nowrap;
+}
+
+.hkalkulator tbody tr {
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    transition: background-color 0.1s ease;
+}
+
+.hkalkulator tbody tr:hover {
+    background-color: var(--md-default-fg-color--lightest);
+}
+
+.hkalkulator tbody td {
+    padding: 0.35rem 0.75rem;
+    vertical-align: middle;
+    align-content: center;
+}
+
+.hkalkulator .result-row td {
+    font-weight: 600;
+    border-top: 1px solid var(--md-default-fg-color--lighter);
+}
+
+.hkalkulator .result-row span {
+    font-variant-numeric: tabular-nums;
+    color: var(--md-typeset-color);
+}
+
+.hkalkulator .start-row td,
+.hkalkulator .end-row td {
+    background-color: var(
+        --md-primary-fg-color--transparent,
+        rgba(var(--md-primary-fg-color--rgb, 63, 81, 181), 0.06)
+    );
+}
+
+.hkalkulator .end-row td {
+    font-size: 0.95rem;
+    border-top: 2px solid var(--md-primary-fg-color, #3f51b5);
+}
+
+.hkalkulator .end-row span {
+    color: var(--md-primary-fg-color, #3f51b5);
+}
+
+.hkalkulator .op-cell {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--md-default-fg-color--light);
+    width: 2rem;
+    text-align: center;
+}
+
+.hkalkulator input[type="number"] {
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    font-family: inherit;
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.hkalkulator input[type="number"]::-webkit-inner-spin-button,
+.hkalkulator input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.hkalkulator input[type="number"]:focus {
+    outline: none;
+    border-color: var(--md-accent-fg-color, #00bcd4);
+    box-shadow:
+        0 0 0 2px rgba(var(--md-accent-fg-color--rgb), 0, 188, 212),
+        0.2;
+}
+
+.hkalkulator input[type="number"][readonly] {
+    background-color: var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color--light);
+    cursor: not-allowed;
+}
+
+.hkalkulator td:nth-child(3) input[type="number"] {
+    width: 70px;
+}
+
+.hkalkulator td:nth-child(4) input[type="number"] {
+    width: 110px;
+}
+
+[data-md-color-scheme="slate"] .hkalkulator input[type="number"] {
+    border-color: var(--md-default-fg-color--light);
+}

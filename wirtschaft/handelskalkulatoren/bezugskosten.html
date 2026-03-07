@@ -1,0 +1,16 @@
+<link rel='stylesheet'
+    href='../handelskalkulatoren/handelskalkulator.css'>
+<div id='bezugskalkulator'></div>
+<script
+    src='../handelskalkulatoren/handelskalkulator.js'></script>
+<script>
+    new HKalkulator("bezugskalkulator", [
+        { id: "listeneinkaufspreis", label: "Listeneinkaufspreis", op: "=", input: "absolute" },
+        { id: "lieferrabatt", label: "Lieferrabatt", op: "-", input: "both" },
+        { id: "zieleinkaufspreis", label: "Zieleinkaufspreis", op: "=" },
+        { id: "lieferskonto", label: "Lieferskonto", op: "-", input: "both" },
+        { id: "bareinkaufspreis", label: "Bareinkaufspreis", op: "=" },
+        { id: "bezugskosten", label: "Bezugskosten", op: "+", input: "absolute" },
+        { id: "bezugspreis", label: "Bezugspreis", op: "=" },
+    ])
+</script>

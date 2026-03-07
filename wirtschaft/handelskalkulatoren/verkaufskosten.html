@@ -1,0 +1,16 @@
+<link rel="stylesheet"
+    href="handelskalkulator.css">
+<div id="verkaufskalkulator"></div>
+<script
+    src="handelskalkulator.js"></script>
+<script>
+    new HKalkulator("verkaufskalkulator", [
+        { id: "selbstkosten", label: "Selbstkosten", op: "=", input: "absolute" },
+        { id: "gewinn", label: "Gewinn", op: "+", input: "both" },
+        { id: "barverkaufspreis", label: "Barverkaufspreis", op: "=" },
+        { id: "kundenskonto", label: "Kundenskonto", op: "+", input: "both", special: "skonto" },
+        { id: "zielverkaufspreis", label: "Zielverkaufspreis", op: "=" },
+        { id: "kundenrabatt", label: "Kundenrabatt", op: "+", input: "both", special: "rabatt" },
+        { id: "listenverkaufspreis", label: "Listenverkaufspreis (netto)", op: "=" },
+    ]);
+</script>

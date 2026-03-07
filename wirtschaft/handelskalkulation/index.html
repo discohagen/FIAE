@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -1258,7 +1258,7 @@
 <tr>
 <td>=</td>
 <td>Bareinkaufspreis</td>
-<td>Tatsächlicher Warenpreis. Bar bedeutet hier die Zahlung falls man die Ware vor Ort und sofort zahlt</td>
+<td>Tatsächlicher Warenpreis. Bar bedeutet hier die Zahlung falls man die Ware vor Ort und sofort zahlt aber nicht zwingend in bar</td>
 </tr>
 <tr>
 <td>+</td>
@@ -1272,8 +1272,91 @@
 </tr>
 </tbody>
 </table>
+<p><link rel='stylesheet'
+    href='../handelskalkulatoren/handelskalkulator.css'></p>
+<div id='bezugskalkulator'></div>
+<p><script
+    src='../handelskalkulatoren/handelskalkulator.js'></script></p>
+<script>
+    new HKalkulator("bezugskalkulator", [
+        { id: "listeneinkaufspreis", label: "Listeneinkaufspreis", op: "=", input: "absolute" },
+        { id: "lieferrabatt", label: "Lieferrabatt", op: "-", input: "both" },
+        { id: "zieleinkaufspreis", label: "Zieleinkaufspreis", op: "=" },
+        { id: "lieferskonto", label: "Lieferskonto", op: "-", input: "both" },
+        { id: "bareinkaufspreis", label: "Bareinkaufspreis", op: "=" },
+        { id: "bezugskosten", label: "Bezugskosten", op: "+", input: "absolute" },
+        { id: "bezugspreis", label: "Bezugspreis", op: "=" },
+    ])
+</script>
+
+<p><strong>Beispiel</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>Listeneinkaufspreis</td>
+<td></td>
+<td></td>
+<td>500,00€</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Lieferrabatt</td>
+<td>10%</td>
+<td><span class="arithmatex">\(10\% * 500,00€\)</span></td>
+<td>50,00€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Zieleinkaufspreis</td>
+<td></td>
+<td></td>
+<td>450,00€</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Lieferskonto</td>
+<td>2%</td>
+<td><span class="arithmatex">\(2\% * 450,00€\)</span></td>
+<td>9,00€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Bareinkaufspreis</td>
+<td></td>
+<td></td>
+<td>441,00€</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Bezugskosten</td>
+<td></td>
+<td></td>
+<td>30,00€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Bezugspreis/Einstandspreis</td>
+<td></td>
+<td></td>
+<td>471,00€</td>
+</tr>
+</tbody>
+</table>
 <h2 id="selbstkostenkalkulation">Selbstkostenkalkulation</h2>
 <p>Die Selbstkostenkalkulation ermittelt den Betrag aller Kosten vor einem Gewinn. Dafür müssen auf den Bezugspreis alle Handlungskosten aufaddiert werden. Handlungskosten sind dabei alle Kosten, welche nicht direkt einem einzelnen Produkt zugeordnet werden können, aber trotzdem im Unternehmen anfallen (z.B. Kosten für Lagerung, Personal, Verwaltung und Vertrieb). Diese sind meistens eine prozentuale Pauschale bzw. das Verhältnis von Handlungskosten insgesamt zu Warenaufwänden in einer Periode.</p>
+<div class="arithmatex">\[
+Handlungskostenzuschlag = \frac{Handlungskosten gesamt * 100\%}{Wareneinsatz gesamt}
+\]</div>
 <table>
 <thead>
 <tr>
@@ -1297,6 +1380,54 @@
 <td>=</td>
 <td>Selbstkosten</td>
 <td>Kosten vor einem Gewinn</td>
+</tr>
+</tbody>
+</table>
+<p><link rel="stylesheet"
+    href="handelskalkulator.css"></p>
+<div id="selbstkostenkalkulator"></div>
+<p><script
+    src="handelskalkulator.js"></script></p>
+<script>
+    new HKalkulator("selbstkostenkalkulator", [
+        { id: "bezugspreis", label: "Bezugspreis / Einstandspreis", op: "=", input: "absolute" },
+        { id: "handlungskosten", label: "Handlungskosten", op: "+", input: "both" },
+        { id: "selbstkosten", label: "Selbstkosten", op: "=" },
+    ]);
+</script>
+
+<p><strong>Beispiel</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>Bezugspreis/Einstandspreis</td>
+<td></td>
+<td></td>
+<td>471,00€</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Handlungskosten</td>
+<td>15%</td>
+<td><span class="arithmatex">\(15\% * 471,00€\)</span></td>
+<td>70,65€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Selbstkosten</td>
+<td></td>
+<td></td>
+<td>541,65€</td>
 </tr>
 </tbody>
 </table>
@@ -1359,6 +1490,87 @@ Zielverkaufspreis = Barverkaufspreis + \frac{Barverkaufspreis * Kundenskonto}{10
 Listenverkaufspreis = Zielverkaufspreis + \frac{Zielverkaufspreis * Kundenrabatt}{100\% - Kundenrabatt}
 \]</div>
 <p>Der Listenverkaufspreis ist in netto angegeben. Um den Listenverkaufspreis in brutto zu bekommen addiert man die Umsatzsteuer (allgemein 19% und ermäßigt 7%).</p>
+<p><link rel="stylesheet"
+    href="handelskalkulator.css"></p>
+<div id="verkaufskalkulator"></div>
+<p><script
+    src="handelskalkulator.js"></script></p>
+<script>
+    new HKalkulator("verkaufskalkulator", [
+        { id: "selbstkosten", label: "Selbstkosten", op: "=", input: "absolute" },
+        { id: "gewinn", label: "Gewinn", op: "+", input: "both" },
+        { id: "barverkaufspreis", label: "Barverkaufspreis", op: "=" },
+        { id: "kundenskonto", label: "Kundenskonto", op: "+", input: "both", special: "skonto" },
+        { id: "zielverkaufspreis", label: "Zielverkaufspreis", op: "=" },
+        { id: "kundenrabatt", label: "Kundenrabatt", op: "+", input: "both", special: "rabatt" },
+        { id: "listenverkaufspreis", label: "Listenverkaufspreis (netto)", op: "=" },
+    ]);
+</script>
+
+<p><strong>Beispiel</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>Selbstkosten</td>
+<td></td>
+<td></td>
+<td>541,65€</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Gewinn</td>
+<td>10%</td>
+<td><span class="arithmatex">\(10\%*541,65€\)</span></td>
+<td>54,17€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Barverkaufspreis</td>
+<td></td>
+<td></td>
+<td>595,82€</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Kundenskonto</td>
+<td>2%</td>
+<td><span class="arithmatex">\(\frac{595,82€ * 2\%}{100\% - 2\%}\)</span></td>
+<td>12,16€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Zielverkaufspreis</td>
+<td></td>
+<td></td>
+<td>607,98€</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Kundenrabatt</td>
+<td>5%</td>
+<td><span class="arithmatex">\(\frac{607,98€ * 5\%}{100\% - 5\%}\)</span></td>
+<td>32,00€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Listenverkaufspreis (netto)</td>
+<td></td>
+<td></td>
+<td>639,98€</td>
+</tr>
+</tbody>
+</table>
+<p>Mit einer Umsatzsteuer von 19% (<span class="arithmatex">\(19\% * 639,98€ = 121,59€\)</span>) ergibt sich ein Listenverkaufspreis (brutto) von 761,57€.</p>
 <h2 id="vollstandige-handelskalkulation-vorwarts">Vollständige Handelskalkulation vorwärts</h2>
 <p>Die vollständige Handelskalkulation vorwärts beinhaltet die Bezugs-, Selbstkosten- und Verkaufskalkulation und beginnt mit dem Listeneinkaufspreis um den Listenverkaufspreis zu ermitteln. Diese Kalkulation wird verwendet um bei fixem Einkaufspreis einen Verkaufspreis für den Kunden zu ermitteln.</p>
 <table>
@@ -1427,16 +1639,417 @@ Listenverkaufspreis = Zielverkaufspreis + \frac{Zielverkaufspreis * Kundenrabatt
 </tr>
 <tr>
 <td>=</td>
-<td>Listenverkaufspreis</td>
+<td>Listenverkaufspreis (netto)</td>
 </tr>
 </tbody>
 </table>
+<p><link rel="stylesheet"
+    href="handelskalkulator.css"></p>
+<div id="vorwaertskalkulator"></div>
+<p><script
+    src="handelskalkulator.js"></script></p>
+<script>
+    new HKalkulator("vorwaertskalkulator", [
+        { id: "listeneinkaufspreis", label: "Listeneinkaufspreis", op: "=", input: "absolute" },
+        { id: "lieferrabatt", label: "Lieferrabatt", op: "-", input: "both" },
+        { id: "zieleinkaufspreis", label: "Zieleinkaufspreis", op: "=" },
+        { id: "lieferskonto", label: "Lieferskonto", op: "-", input: "both" },
+        { id: "bareinkaufspreis", label: "Bareinkaufspreis", op: "=" },
+        { id: "bezugskosten", label: "Bezugskosten", op: "+", input: "absolute" },
+        { id: "bezugspreis", label: "Bezugspreis", op: "=" },
+        { id: "handlungskosten", label: "Handlungskosten", op: "+", input: "both" },
+        { id: "selbstkosten", label: "Selbstkosten", op: "=" },
+        { id: "gewinn", label: "Gewinn", op: "+", input: "both" },
+        { id: "barverkaufspreis", label: "Barverkaufspreis", op: "=" },
+        { id: "kundenskonto", label: "Kundenskonto", op: "+", input: "both", special: "skonto" },
+        { id: "zielverkaufspreis", label: "Zielverkaufspreis", op: "=" },
+        { id: "kundenrabatt", label: "Kundenrabatt", op: "+", input: "both", special: "rabatt" },
+        { id: "listenverkaufspreis", label: "Listenverkaufspreis (netto)", op: "=" },
+    ]);
+</script>
+
+<p><strong>Beispiel</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>Listeneinkaufspreis</td>
+<td></td>
+<td></td>
+<td>500,00€</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Lieferrabatt</td>
+<td>10%</td>
+<td><span class="arithmatex">\(10\% * 500,00€\)</span></td>
+<td>50,00€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Zieleinkaufspreis</td>
+<td></td>
+<td></td>
+<td>450,00€</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Lieferskonto</td>
+<td>2%</td>
+<td><span class="arithmatex">\(2\% * 450,00€\)</span></td>
+<td>9,00€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Bareinkaufspreis</td>
+<td></td>
+<td></td>
+<td>441,00€</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Bezugskosten</td>
+<td></td>
+<td></td>
+<td>30,00€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Bezugspreis</td>
+<td></td>
+<td></td>
+<td>471,00€</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Handlungskosten</td>
+<td>15%</td>
+<td><span class="arithmatex">\(15\% * 471,00€\)</span></td>
+<td>70,65€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Selbstkosten</td>
+<td></td>
+<td></td>
+<td>541,65€</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Gewinn</td>
+<td>10%</td>
+<td><span class="arithmatex">\(10\%*541,65€\)</span></td>
+<td>54,17€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Barverkaufspreis</td>
+<td></td>
+<td></td>
+<td>595,82€</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Kundenskonto</td>
+<td>2%</td>
+<td><span class="arithmatex">\(\frac{595,82€ * 2\%}{100\% - 2\%}\)</span></td>
+<td>12,16€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Zielverkaufspreis</td>
+<td></td>
+<td></td>
+<td>607,98€</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Kundenrabatt</td>
+<td>5%</td>
+<td><span class="arithmatex">\(\frac{607,98€ * 5\%}{100\% - 5\%}\)</span></td>
+<td>32,00€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Listenverkaufspreis (netto)</td>
+<td></td>
+<td></td>
+<td>639,98€</td>
+</tr>
+</tbody>
+</table>
+<p>Mit einer Umsatzsteuer von 19% (<span class="arithmatex">\(19\% * 639,98€ = 121,59€\)</span>) ergibt sich ein Listenverkaufspreis (brutto) von 761,57€.</p>
 <h2 id="vollstandige-handelskalkulation-ruckwarts">Vollständige Handelskalkulation rückwärts</h2>
 <p>Die vollständige Handelskalkulation rückwärts beinhaltet alle Teilkalkulationen, aber beginnt mit einem fixen Listenverkaufspreis und versucht dadurch den maximalen Listeneinkaufspreis zu bestimmen, mit dem man die Ware einkaufen darf.</p>
 <p><strong>Achtung!</strong></p>
 <p>Die Bezüge der Operationen drehen sich um.</p>
+<p><link rel="stylesheet"
+    href="handelskalkulator.css"></p>
+<div id="rueckwaertskalkulator"></div>
+<p><script
+    src="handelskalkulator.js"></script></p>
+<script>
+    new HKalkulator("rueckwaertskalkulator", [
+        { id: "listenverkaufspreis", label: "Listenverkaufspreis (netto)", op: "=", input: "absolute" },
+        { id: "kundenrabatt", label: "Kundenrabatt", op: "-", input: "both", special: "skonto-rueck" },
+        { id: "zielverkaufspreis", label: "Zielverkaufspreis", op: "=" },
+        { id: "kundenskonto", label: "Kundenskonto", op: "-", input: "both", special: "skonto-rueck" },
+        { id: "barverkaufspreis", label: "Barverkaufspreis", op: "=" },
+        { id: "gewinn", label: "Gewinn", op: "-", input: "both", special: "gewinn-rueck" },
+        { id: "selbstkosten", label: "Selbstkosten", op: "=" },
+        { id: "handlungskosten", label: "Handlungskosten", op: "-", input: "both", special: "hk-rueck" },
+        { id: "bezugspreis", label: "Bezugspreis", op: "=" },
+        { id: "bezugskosten", label: "Bezugskosten", op: "-", input: "absolute" },
+        { id: "bareinkaufspreis", label: "Bareinkaufspreis", op: "=" },
+        { id: "lieferskonto", label: "Lieferskonto", op: "+", input: "both", special: "lieferskonto-rueck" },
+        { id: "zieleinkaufspreis", label: "Zieleinkaufspreis", op: "=" },
+        { id: "lieferrabatt", label: "Lieferrabatt", op: "+", input: "both", special: "lieferrabatt-rueck" },
+        { id: "listeneinkaufspreis", label: "Listeneinkaufspreis", op: "=" },
+    ]);
+</script>
+
+<p><strong>Beispiel</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>Listenverkaufspreis (netto)</td>
+<td></td>
+<td></td>
+<td>1.200,00€</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Kundenrabatt</td>
+<td>8%</td>
+<td><span class="arithmatex">\(8\% * 1.200,00€\)</span></td>
+<td>96,00€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Zielverkaufspreis</td>
+<td></td>
+<td></td>
+<td>1.104,00€</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Kundenskonto</td>
+<td>3%</td>
+<td><span class="arithmatex">\(3\% * 1.100,69€\)</span></td>
+<td>33,12€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Barverkaufspreis</td>
+<td></td>
+<td></td>
+<td>1.070,88€</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Gewinn</td>
+<td>12%</td>
+<td><span class="arithmatex">\(\frac{1.070,88€ * 12\%}{100\% - 12\%}\)</span></td>
+<td>146,03€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Selbstkosten</td>
+<td></td>
+<td></td>
+<td>924,85€</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Handlungskosten</td>
+<td>20%</td>
+<td><span class="arithmatex">\(\frac{924,85€ * 20\%}{100\% - 20\%}\)</span></td>
+<td>154,14€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Bezugspreis</td>
+<td></td>
+<td></td>
+<td>770,71€</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Bezugskosten</td>
+<td></td>
+<td></td>
+<td>45,00€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Bareinkaufspreis</td>
+<td></td>
+<td></td>
+<td>725,71€</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Lieferskonto</td>
+<td>2%</td>
+<td><span class="arithmatex">\(\frac{725,71€ * 2\%}{100\% - 2\%}\)</span></td>
+<td>14,81€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Zieleinkaufspreis</td>
+<td></td>
+<td></td>
+<td>740,52€</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Lieferrabatt</td>
+<td>15%</td>
+<td><span class="arithmatex">\(\frac{740,52€ * 15\%}{100\% - 15\%}\)</span></td>
+<td>130,68€</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Listeneinkaufspreis</td>
+<td></td>
+<td></td>
+<td>871,20€</td>
+</tr>
+</tbody>
+</table>
 <h2 id="differenzkalkulation">Differenzkalkulation</h2>
 <p>Die Differenzkalkulation ermittelt den maximal möglichen Gewinn bei fixen Listeneinkaufs- und Listenverkaufspreis. Dafür führt man die Vorwärtskalkulation bis zu den Selbstkosten und die Rückwärtskalkulation bis zum Barverkaufspreis durch und berechnet dann die Differenz aus Barverkaufspreis und Selbstkosten.</p>
+<p><link rel='stylesheet'
+    href='handelskalkulator.css'></p>
+<div id='differenzkalkulator-wrapper'>
+    <h4 style='margin-top: 0;'>
+        Einkaufsseite -> Selbstkosten
+    </h4>
+    <div id='differenz-einkauf'></div>
+
+    <h4>Verkaufsseite ->
+        Barverkaufspreis</h4>
+    <div id='differenz-verkauf'></div>
+
+    <table class='hkalkulator'
+        id='differenz-ergebnis-table'>
+        <tbody>
+            <tr
+                class='result-row end-row'>
+                <td>Barverkaufspreis
+                </td>
+                <td class='op-cell'>
+                </td>
+                <td></td>
+                <td><span
+                        id='differenz-barverkauf-display'>-</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Selbstkosten</td>
+                <td class='op-cell'>-
+                </td>
+                <td></td>
+                <td><span
+                        id='differenz-selbstkosten-display'>-</span>
+                </td>
+            </tr>
+            <tr
+                class='result-row end-row'>
+                <td><strong>Maximaler
+                        Gewinn</strong>
+                </td>
+                <td class='op-cell'>=
+                </td>
+                <td></td>
+                <td><span
+                        id='differenz-gewinn-display'>-</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p><script
+    src="handelskalkulator.js"></script></p>
+<script>
+    const einkauf = new HKalkulator("differenz-einkauf", [
+        { id: "listeneinkaufspreis", label: "Listeneinkaufspreis", op: "=", input: "absolute" },
+        { id: "lieferrabatt", label: "Lieferrabatt", op: "-", input: "both" },
+        { id: "zieleinkaufspreis", label: "Zieleinkaufspreis", op: "=" },
+        { id: "lieferskonto", label: "Lieferskonto", op: "-", input: "both" },
+        { id: "bareinkaufspreis", label: "Bareinkaufspreis", op: "=" },
+        { id: "bezugskosten", label: "Bezugskosten", op: "+", input: "absolute" },
+        { id: "bezugspreis", label: "Bezugspreis", op: "=" },
+        { id: "handlungskosten", label: "Handlungskosten", op: "+", input: "both" },
+        { id: "selbstkosten", label: "Selbstkosten", op: "=" },
+    ]);
+
+    const verkauf = new HKalkulator("differenz-verkauf", [
+        { id: "listenverkaufspreis", label: "Listenverkaufspreis (netto)", op: "=", input: "absolute" },
+        { id: "kundenrabatt", label: "Kundenrabatt", op: "-", input: "both", special: "skonto-rueck" },
+        { id: "zielverkaufspreis", label: "Zielverkaufspreis", op: "=" },
+        { id: "kundenskonto", label: "Kundenskonto", op: "-", input: "both", special: "skonto-rueck" },
+        { id: "barverkaufspreis", label: "Barverkaufspreis", op: "=" },
+    ]);
+
+    // ── Live difference calculation ──────────────────────────────────────────
+
+    function fmt(v) {
+        return v.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+    }
+
+    function readSpan(id) {
+        const el = document.getElementById(id);
+        if (!el) return 0;
+        return parseFloat(el.textContent.replace(/[^\d,.-]/g, '').replace(',', '.')) || 0;
+    }
+
+    function updateDiff() {
+        const selbstkosten = readSpan('differenz-einkauf__selbstkosten__abs');
+        const barverkaufspreis = readSpan('differenz-verkauf__barverkaufspreis__abs');
+        const gewinn = barverkaufspreis - selbstkosten;
+
+        document.getElementById('differenz-selbstkosten-display').textContent = fmt(selbstkosten);
+        document.getElementById('differenz-barverkauf-display').textContent = fmt(barverkaufspreis);
+
+        const gewinnEl = document.getElementById('differenz-gewinn-display');
+        gewinnEl.textContent = fmt(gewinn);
+        gewinnEl.style.color = gewinn >= 0
+            ? 'var(--md-primary-fg-color, green)'
+            : 'var(--md-typeset-del-color, red)';
+    }
+
+    // Patch both instances to also call updateDiff after recalc
+    const origEinkauf = einkauf._recalc.bind(einkauf);
+    einkauf._recalc = function () { origEinkauf(); updateDiff(); };
+
+    const origVerkauf = verkauf._recalc.bind(verkauf);
+    verkauf._recalc = function () { origVerkauf(); updateDiff(); };
+
+    // Re-bind with patched recalc
+    einkauf._bind();
+    verkauf._bind();
+</script>
 
 
 
