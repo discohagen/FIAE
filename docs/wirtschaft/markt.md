@@ -48,6 +48,8 @@ Gütermärkte handeln tatsächliche Güter (z.B. Konsumgüter oder Invesitionsg�
 
 Um nicht nur den Markt an sich sondern auch die Situation auf dem Markt zu analysieren zu können benutzt man die folgenden Marktgrößen:
 
+![Marktgrößen](figures/Marktgroessen.png)
+
 ### Absatzvolumen
 
 Das Absatzuvolumen ist der gegenwärtige Absatz eines Anbieters auf einem Markt in einer bestimmten Periode. Es ist die kleinste Marktgöße.
