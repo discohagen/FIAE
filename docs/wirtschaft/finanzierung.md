@@ -6,17 +6,26 @@ Finanzierung umfasst alle Maßnahmen in einem Unternehmen die mit der Kapitalbes
 
 ![Finanzierungsarten](figures/Finanzierungsarten.png)
 
-### Selbstfinanzierung
+Die Kapitalherkunft sagt aus ob das Kapital aus der Unternehmung selbst (Innen) oder von externen Quellen stammt (Außen).
+Die Rechtsstellung des Kapitalgebers ist entweder Eigentümer, Gesellschafter oder Aktionär der Unternehmung (Eigen) oder ein externer Gläubiger (Fremd).
 
-### Finanzierung durch Kapitalfreisetzung
+### Selbstfinanzierung (Innen-Eigenfinanzierung)
 
-### Finanzierung aus Rückstellung
+Refinanzierung von Gewinnen. Bei Personengesellschaften ist dies die Differenz aus Jahresgewinn und Privateinnahmen. Bei Kapitalgesellschaften wird nicht ausgeschütetter Gewinn den Rücklagen zugeführt oder als Gewinnvortrag ausgewiesen.
 
-### Einlagen und Beteiligungsfinanzierung
+### Finanzierung durch Kapitalfreisetzung (Innen-Eigenfinanzierung)
+
+Finanzierung aus Abschreibung (Gewinn- und somit Steuerminderung wg. Wertminderung von Anlage- oder Umflaufvermögensgegenständen durch z.B. Abnutzung oder Verbrauch) oder aus Verkauf von Produktionsfaktoren.
+
+### Finanzierung aus Rückstellung (Innen-Fremdfinanzierung)
+
+Finanzierung durch zurückgestelltes Kapital. Rückstellungen (z.B. Pensionen) sind Aufwendungen, die erst in Zukunft zu tatsächlichen Ausgaben werden.
+
+### Einlagen und Beteiligungsfinanzierung (Außen-Eigenfinanzierung)
 
 Einlagen durch Eigentümer oder Gesellschafter die z.B. das Erhöhen des Stammkapitals, die Aufnahme neuer Gesellschafter oder die Ausgabe neuer Aktien beinhalten.
 
-### Kreditfinanzierung
+### Kreditfinanzierung (Außen-Fremdfinanzierung)
 
 Gläubigerkapital wird in der Form von Krediten (Überlassung von Geld oder vertretbaren Sachen) i.d.R. gegen Sicherheiten bereitgestellt. Diese Sicherheiten kann der Gläubiger (Kreditgeber) verwerten falls der Schuldner (Kreditnehmer) seinen Verpflichtungen nicht nachkommt.
 
@@ -58,4 +67,14 @@ Die Tilgung erfolgt kontinuierlich zur Laufzeit mit konstanten Tilgungsbeträgen
 
 ![Abzahlungsdarlehen](figures/Abzahlungsdarlehen.png)
 
-### Leasing
+### Leasing (Außen-Fremdfinanzierung)
+
+Leasing ist eine Sonderform von Finanzierung und Vermietung. Ähnlich der Vermietung überlässt der Leasinggeber (Vermieter) dem Leasingnehmer (Mieter) den Gegenstand des Anlagevermögens und erhält dafür regelmäßig eine Leasingrate (Miete und Mietzins). Das Eigentum bleibt dabei beim Leasinggeber. Nach Ablauf der Leasingdauer hat der Leasingnehmer die Möglichkeit den Gegenstand zurückzugeben oder diesen zum Restwert zu kaufen.
+
+#### Ausflug Eigentum und Besitz
+
+Eigentum ist die rechtliche Herrschaft über eine Sache (§903 BGB), während Besitz die tatsächliche, physische und unmittelbare Herrschaft über die Sache ist (§854 BGB). Eigentum sagt damit aus wem die Sache gehört, während Besitz aussagt wer die Sache hat. 
+
+Ein Vermieter ist Wohnungseigentümer, wärhend der Vermieter der Besitzer der Wohnung ist.
+Aber auch ein Dieb ist Besitzer des gestohlenen Gegenstandes während der Eigentümer bei (einfachen) Diebstahl bestehen bleibt.
+Im Supermarkt ist man Besitzer eines Produktes sobald man es aus dem Regal an seine Person nimmt. Das Eigentum überträgt sich aber erst mit dem Inkrafttreten des Kaufvertrags, in dem Moment in dem der Kassierer das Produkt im Kassensystem für den speziellen Verkauf einscannt.
